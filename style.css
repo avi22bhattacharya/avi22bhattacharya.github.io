@@ -4,7 +4,6 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
@@ -12,16 +11,26 @@ body {
     scroll-behavior: smooth; /* Smooth scrolling */
 }
 
+.about {
+    width: 50%;
+    height: 50%;
+    float:left;
+    color: #fff;
+    display: flex;
+}
+
+
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    background: rgba(0, 0, 0, 0.9); /* Slightly transparent black background */
+    height: 99vh; /* Full viewport height */
+    /* #212121 */
+    background: rgba(255, 255, 255, 0); /* Slightly transparent black background */
     text-align: center;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Light white shadow for a glow effect */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5); /* Light white shadow for a glow effect */
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     transition: opacity 0.6s, transform 0.6s; /* Smooth transition for reveal effect */
@@ -37,6 +46,21 @@ body {
     transform: translateY(0);
 }
 
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -49,8 +73,228 @@ body::before {
     z-index: -1; /* Place it behind the content */
 }
 
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1, h2, p {
     color: white;
+}
+
+/*----------------genealogy-scroll----------*/
+
+.genealogy-scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+.genealogy-scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb {
+    background: #212121;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb:hover {
+    background: #d5b14c;
+    transition: 0.5s;
+}
+
+
+/*----------------genealogy-tree----------*/
+.genealogy-body{
+    white-space: normal;
+    overflow-y: hidden;
+    padding: 50px;
+    min-height: 500px;
+    padding-top: 10px;
+    text-align: center;
+}
+.genealogy-tree{
+  display: inline-block;
+}
+.genealogy-tree ul {
+    padding-top: 20px; 
+    position: relative;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+}
+.genealogy-tree li {
+    float: left; text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+.genealogy-tree li::before, .genealogy-tree li::after{
+    content: '';
+    position: absolute; 
+    top: 0; 
+    right: 50%;
+    border-top: 2px solid #ccc;
+    width: 50%; 
+    height: 18px;
+}
+.genealogy-tree li::after{
+    right: auto; left: 50%;
+    border-left: 2px solid #ccc;
+}
+.genealogy-tree li:only-child::after, .genealogy-tree li:only-child::before {
+    display: none;
+}
+.genealogy-tree li:only-child{ 
+    padding-top: 0;
+}
+.genealogy-tree li:first-child::before, .genealogy-tree li:last-child::after{
+    border: 0 none;
+}
+.genealogy-tree li:last-child::before{
+    border-right: 2px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+.genealogy-tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+.genealogy-tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 2px solid #ccc;
+    width: 0; height: 20px;
+}
+.genealogy-tree li a{
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.genealogy-tree li a:hover {
+	background: #555555;
+	color: #000;
+}
+
+
+
+/*--------------memeber-card-design----------*/
+
+.member-view-box{
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 5%;
+    position: relative;
+    width: 30vh;
+    height: 15vh;
+    border: 1px;
+    border-color: #e4e4e4;
+    border-style: solid;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden; /* Hide overflow to prevent content from showing when not hovered */
+    transition: width 1s ease, height 1s ease; /* Smooth transition for width and height */
+    cursor: pointer;
+}
+.member-image{
+    padding:10px;
+    width: 120px;
+    position: relative;
+}
+.member-image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background-color :#fff;
+    z-index: 1;
+}
+.member-header {
+  padding: 5px 0;
+  text-align: center;
+  background: #345;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px 4px 0 0;
+}
+/* 
+.member-footer {
+  text-align: center;
+  padding: 25px;
+}
+
+.member-footer .hover-content {
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.member-footer:hover .hover-content {
+    opacity: 1; 
+}
+   */
+  .member-footer {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .member-view-box .hover-content {
+    display: none; /* Hide content by default */
+    position: absolute; /* Optional: position it absolutely inside the parent */
+    transition: opacity 2s ease;
+    width: 100%; /* Full width of parent */
+    padding-right: 10px;
+  }
+  
+  .member-view-box.expanded {
+    width: 100vh; /* New width on hover */
+    height: 20vh; /* New height on hover */
+    border-radius: 5%;
+  }
+  
+  .member-view-box.expanded .hover-content {
+    display: block; /* Show content on hover */
+  }
+  
+.member-footer div.name {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.member-footer div.downline {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.member-footer li a{
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    width: 30vh;
+    height: 15vh;
+    border: 10px;
+    border-color: #e4e4e4;
+    border-style: solid;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden; /* Hide overflow to prevent content from showing when not hovered */
+    transition: width 1s ease, height 1s ease; /* Smooth transition for width and height */
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
