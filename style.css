@@ -176,7 +176,7 @@ h1, h2, h3, p {
 
 ul {
     --col-gap: 2rem;
-    --row-gap: 2rem;
+    --row-gap: 20rem;
     --line-w: 0.25rem;
     display: grid;
     grid-template-columns: var(--line-w) 1fr;
