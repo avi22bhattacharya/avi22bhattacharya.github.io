@@ -16,9 +16,54 @@ body {
     height: 50%;
     float:left;
     color: #fff;
-    display: flex;
+    background-color: #026b27fd;
+    border-radius: 10%;
+    
+    /* background-image: linear-gradient(to right,blue, green); */
 }
 
+.music2 {
+  width: 50%;
+  height: 50%;
+  float:left;
+  color: #fff;
+  background-color: #066adcfd;
+  border-radius: 10%;
+  /* background-image: linear-gradient(to right, green, orange); */
+}
+
+.music3 {
+  width: 50%;
+  height: 50%;
+  float:left;
+  color: #fff;
+ 
+  background-color: #ca7f06fd;
+  border-radius: 10%;
+  /* background-image: linear-gradient(to right, orange,red); */
+}
+
+.flex-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0);
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 15px;
+  height: 15vh;
+  color: #fff;
+}
+
+.about h2 {
+  width: 100%;
+  text-align: center;
+}
 
 .content {
     display: flex;
@@ -28,12 +73,21 @@ body {
     width: 100%;
     height: 99vh; /* Full viewport height */
     /* #212121 */
-    background: rgba(255, 255, 255, 0); /* Slightly transparent black background */
+    background: rgba(0, 0, 0, 0); /* Slightly transparent black background */
     text-align: center;
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.5); /* Light white shadow for a glow effect */
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     transition: opacity 0.6s, transform 0.6s; /* Smooth transition for reveal effect */
+}
+
+.timeline {
+  padding: 10%;
+  font-family: "Montserrat", sans-serif;
+
+}
+.timeline h1{
+  text-align: center;
 }
 
 .hidden {
@@ -87,218 +141,208 @@ header {
     align-items: center;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     color: white;
 }
 
-/*----------------genealogy-scroll----------*/
 
-.genealogy-scroll::-webkit-scrollbar {
-    width: 5px;
-    height: 8px;
-}
-.genealogy-scroll::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: #e4e4e4;
-}
-.genealogy-scroll::-webkit-scrollbar-thumb {
-    background: #212121;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-.genealogy-scroll::-webkit-scrollbar-thumb:hover {
-    background: #d5b14c;
-    transition: 0.5s;
-}
-
-
-/*----------------genealogy-tree----------*/
-.genealogy-body{
-    white-space: normal;
-    overflow-y: hidden;
-    padding: 50px;
-    min-height: 500px;
-    padding-top: 10px;
-    text-align: center;
-}
-.genealogy-tree{
-  display: inline-block;
-}
-.genealogy-tree ul {
-    padding-top: 20px; 
-    position: relative;
-    padding-left: 0px;
-    display: flex;
-    justify-content: center;
-}
-.genealogy-tree li {
-    float: left; text-align: center;
-    list-style-type: none;
-    position: relative;
-    padding: 20px 5px 0 5px;
-}
-.genealogy-tree li::before, .genealogy-tree li::after{
-    content: '';
-    position: absolute; 
-    top: 0; 
-    right: 50%;
-    border-top: 2px solid #ccc;
-    width: 50%; 
-    height: 18px;
-}
-.genealogy-tree li::after{
-    right: auto; left: 50%;
-    border-left: 2px solid #ccc;
-}
-.genealogy-tree li:only-child::after, .genealogy-tree li:only-child::before {
-    display: none;
-}
-.genealogy-tree li:only-child{ 
-    padding-top: 0;
-}
-.genealogy-tree li:first-child::before, .genealogy-tree li:last-child::after{
-    border: 0 none;
-}
-.genealogy-tree li:last-child::before{
-    border-right: 2px solid #ccc;
-    border-radius: 0 5px 0 0;
-    -webkit-border-radius: 0 5px 0 0;
-    -moz-border-radius: 0 5px 0 0;
-}
-.genealogy-tree li:first-child::after{
-    border-radius: 5px 0 0 0;
-    -webkit-border-radius: 5px 0 0 0;
-    -moz-border-radius: 5px 0 0 0;
-}
-.genealogy-tree ul ul::before{
-    content: '';
-    position: absolute; top: 0; left: 50%;
-    border-left: 2px solid #ccc;
-    width: 0; height: 20px;
-}
-.genealogy-tree li a{
-    text-decoration: none;
-    color: #666;
-    font-family: arial, verdana, tahoma;
-    font-size: 11px;
-    display: inline-block;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
-
-.genealogy-tree li a:hover {
-	background: #555555;
-	color: #000;
-}
-
-
-
-/*--------------memeber-card-design----------*/
-
-.member-view-box{
-    padding-bottom: 10px;
-    text-align: center;
-    border-radius: 5%;
-    position: relative;
-    width: 30vh;
-    height: 15vh;
-    border: 1px;
-    border-color: #e4e4e4;
-    border-style: solid;
-    font-family: "Montserrat", sans-serif;
-    overflow: hidden; /* Hide overflow to prevent content from showing when not hovered */
-    transition: width 1s ease, height 1s ease; /* Smooth transition for width and height */
-    cursor: pointer;
-}
-.member-image{
-    padding:10px;
-    width: 120px;
-    position: relative;
-}
-.member-image img{
-    width: 100px;
-    height: 100px;
-    border-radius: 6px;
-    background-color :#fff;
-    z-index: 1;
-}
-.member-header {
-  padding: 5px 0;
-  text-align: center;
-  background: #345;
-  color: #fff;
-  font-size: 14px;
-  border-radius: 4px 4px 0 0;
-}
-/* 
-.member-footer {
-  text-align: center;
-  padding: 25px;
-}
-
-.member-footer .hover-content {
-    opacity: 0; 
-    transition: opacity 0.3s ease;
-}
-
-.member-footer:hover .hover-content {
-    opacity: 1; 
-}
-   */
-  .member-footer {
-    text-align: center;
-    padding: 10px;
+#slideshow {
+  position: relative;
+  width: 40vh;
   }
   
-  .member-view-box .hover-content {
-    display: none; /* Hide content by default */
-    position: absolute; /* Optional: position it absolutely inside the parent */
-    transition: opacity 2s ease;
-    width: 100%; /* Full width of parent */
-    padding-right: 10px;
-  }
-  
-  .member-view-box.expanded {
-    width: 100vh; /* New width on hover */
-    height: 20vh; /* New height on hover */
-    border-radius: 5%;
-  }
-  
-  .member-view-box.expanded .hover-content {
-    display: block; /* Show content on hover */
-  }
-  
-.member-footer div.name {
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-.member-footer div.downline {
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.member-footer li a{
-    padding-bottom: 10px;
-    text-align: center;
-    border-radius: 4px;
+  #slideshow h1 {
     position: relative;
-    width: 30vh;
-    height: 15vh;
-    border: 10px;
-    border-color: #e4e4e4;
-    border-style: solid;
-    font-family: "Montserrat", sans-serif;
-    overflow: hidden; /* Hide overflow to prevent content from showing when not hovered */
-    transition: width 1s ease, height 1s ease; /* Smooth transition for width and height */
-    cursor: pointer;
-}
+
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    color: #fff;
+    }
+    
+    #slideshow h1.active {
+    opacity: 1;
+    }
+
+
+
+
+/* Vertical Timeline */
 
 @media (max-width: 600px) {
     .content {
         padding: 10px;
     }
 }
+
+ul {
+    --col-gap: 2rem;
+    --row-gap: 2rem;
+    --line-w: 0.25rem;
+    display: grid;
+    grid-template-columns: var(--line-w) 1fr;
+    grid-auto-columns: max-content;
+    column-gap: var(--col-gap);
+    list-style: none;
+    width: min(60rem, 90%);
+    margin-inline: auto;
+  }
+  
+  /* line */
+  ul::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / span 20;
+    background: rgb(225, 225, 225);
+    border-radius: calc(var(--line-w) / 2);
+  }
+  
+  /* columns*/
+  
+  /* row gaps */
+  ul li:not(:last-child) {
+    margin-bottom: var(--row-gap);
+  }
+  
+  /* card */
+  ul li {
+    grid-column: 2;
+    --inlineP: 1.5rem;
+    margin-inline: var(--inlineP);
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+  }
+  
+  /* date */
+  ul li .date {
+    --dateH: 3rem;
+    height: var(--dateH);
+    margin-inline: calc(var(--inlineP) * -1);
+  
+    text-align: center;
+    background-color: var(--accent-color);
+  
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+  
+    display: grid;
+    place-content: center;
+    position: relative;
+  
+    border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+  }
+  
+  /* date flap */
+  ul li .date::before {
+    content: "";
+    width: var(--inlineP);
+    aspect-ratio: 1;
+    background: var(--accent-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+    position: absolute;
+    top: 100%;
+  
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    right: 0;
+  }
+  
+  /* circle */
+  ul li .date::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    aspect-ratio: 1;
+    background: var(--bgColor);
+    border: 0.3rem solid var(--accent-color);
+    border-radius: 50%;
+    top: 50%;
+  
+    transform: translate(50%, -50%);
+    right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  
+  /* title descr */
+  ul li .title,
+  ul li .descr {
+    background: var(--bgColor);
+    position: relative;
+    padding-inline: 1.5rem;
+    color: #fff;
+  }
+  ul li .title {
+    overflow: hidden;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  ul li .descr {
+    padding-block-end: 1.5rem;
+    font-weight: 300;
+  }
+  
+  /* shadows */
+  ul li .title::before,
+  ul li .descr::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    border-radius: 50%;
+    filter: blur(4px);
+    transform: translate(-50%, 50%);
+  }
+  ul li .title::before {
+    bottom: calc(100% + 0.125rem);
+  }
+  
+  ul li .descr::before {
+    z-index: -1;
+    bottom: 0.25rem;
+  }
+  
+  @media (min-width: 40rem) {
+    ul {
+      grid-template-columns: 1fr var(--line-w) 1fr;
+    }
+    ul::before {
+      grid-column: 2;
+    }
+    ul li:nth-child(odd) {
+      grid-column: 1;
+    }
+    ul li:nth-child(even) {
+      grid-column: 3;
+    }
+  
+    /* start second card */
+    ul li:nth-child(2) {
+      grid-row: 2/4;
+    }
+  
+    ul li:nth-child(odd) .date::before {
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      left: 0;
+    }
+  
+    ul li:nth-child(odd) .date::after {
+      transform: translate(-50%, -50%);
+      left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    }
+    ul li:nth-child(odd) .date {
+      border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+    }
+  }
+  
+  .credits {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  .credits a {
+    color: var(--color);
+  }
+
+  /* Laptop */
