@@ -15,3 +15,4 @@ slides[slideIndex].classList.add('active');
 }
 
 setInterval(showSlides, 2000);
+
