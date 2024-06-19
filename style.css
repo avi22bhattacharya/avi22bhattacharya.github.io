@@ -9,11 +9,12 @@ body, html {
 body {
     background: white;
     scroll-behavior: smooth; /* Smooth scrolling */
+    /* overflow-x: scroll; */
 }
 
 .about {
     width: 50%;
-    height: 50%;
+    height: 100%;
     float:left;
     color: #fff;
     background-color: #026b27fd;
@@ -24,7 +25,7 @@ body {
 
 .music2 {
   width: 50%;
-  height: 50%;
+  height: 100%;
   float:left;
   color: #fff;
   background-color: #066adcfd;
@@ -34,7 +35,7 @@ body {
 
 .music3 {
   width: 50%;
-  height: 50%;
+  height: 100%;
   float:left;
   color: #fff;
  
@@ -56,8 +57,9 @@ body {
   margin: 10px;
   padding: 20px;
   font-size: 15px;
-  height: 15vh;
+  height: 25vh;
   color: #fff;
+  align-content: center;
 }
 
 .about h2 {
@@ -176,7 +178,7 @@ h1, h2, h3, p {
 
 ul {
     --col-gap: 2rem;
-    --row-gap: 20rem;
+    --row-gap: 2rem;
     --line-w: 0.25rem;
     display: grid;
     grid-template-columns: var(--line-w) 1fr;
