@@ -1,187 +1,163 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avi Bhattacharya's Personal Website</title>
+    <title>Avi Bhattacharya | Software Engineer & Researcher</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
     <header>
-      <nav>
-        <div class="header" id="header">
-          <div class="row">
-            <div class="column">
-              <a href="mailto:avibhatt@umich.edu" title="Email">
-                <img src="gmail3.png" alt="Snow" style="width:100%">
-              </a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <span>Dark Mode</span>
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
             </div>
-            <div class="column">
-              <a href="https://www.linkedin.com/in/avi-bhattacharya-a9b052210/" target="_blank" title="LinkedIn">
-                <img src="link.png" alt="Forest" style="width:100%">
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://github.com/avi22bhattacharya" target="_blank" title="GitHub">
-                <img src="github-mark-white.png" alt="Mountains" style="width:100%">
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://drive.google.com/file/d/1srubO16P3QXugsrYmpiX5QUzVnCbjCh0/view?usp=sharing" target="_blank" title="Resume/CV">
-                <img src="cv.png" alt="Mountains" style="width:100%">
-              </a>
-            </div>
-          </div>
-      </nav>
+        </nav>
     </header>
-    <div id="home" class="content">
-      
-      <div id="slideshow">
-        <h1>হ্যালো</h1>
-        <h1>Hey!</h1>
-        <h1>नमस्ते</h1>
-        <!-- <img src="english.png" alt="Image 1">
-        <img src="hindi.png" alt="Image 2">
-        <img src="bangla.png" alt="Image 3"> -->
-      </div>
-      <p>I&apos;m Avi Bhattacharya, a rising Junior studying Computer Science at the University of Michigan.</p>
-      <p></p>
-      <!-- <img src="laptop3.jpg" alt="Snow" width="15%" height="15%"> -->
-      <!-- <img src="laptop2.png" alt="Snow" width="15%" height="15%"> -->
-      
-    </div>
-    <div class="content">
-      <h1>Some of my interests</h1>
-      <div class="flex-container">
-        <div class="f1">
-          <h2>Music</h2>
-          <p>
-            <p>(Check out <a style="text-decoration: none; color:aquamarine" href="https://github.com/avi22bhattacharya/music-ai-generator" target="_blank">tune.ai</a>)</p>
-            <!-- <img src="github-mark-white.png" alt="Snow" height="5%" width="5%"> -->
-             <p>
-            Led Zeppelin<br>Rush<br>The Strokes<br>Cream<br>ELO<br>
-           </p>
-          </p>
-        </div>
-        <div class="f2">
-          <h2>Shows</h2>
-          <p>
-            Suits<br>Breaking Bad<br>Code Geass<br>Cowboy Bebop<br>
-          </p>
-        </div>
-        <div class="f3">
-          <h2>Sports</h2>
-          <p>
-            Basketball<br>Swimming<br>F1<br>Chess<br>
-          </p>
-        </div>
-      </div>
-    </div>
-  </fade-in>
-    <div class="content">
-      <h1>Technical Skills and Areas of Interest</h1>
-      <div class="flex-container">
-        <div class="t1">
-          <h2>Programming Languages</h2>
-          <p>
-            Python<br>C/C++<br>JavaScript<br>SQL<br>Assembly<br>R
-          </p>
-        </div>
-        <div class="t2">
-          <h2>Full Stack Development</h2>
-            <p>
-              HTML/CSS<br>React<br>Flask<br>SQLite3<br>REST API<br>AWS<br>Docker<br>Threading<br>YAML<br>Git<br>GitHub Actions
-            </p>
-        </div>
-        <div class="t3">
-          <h2>ML + AI</h2>
-          <p>
-            NumPy<br>Pandas<br>Matplotlib<br>Seaborn<br>PySpark<br>sklearn<br>PyTorch<br>NLTK<br>Gensim<br>Audiocraft
-          </p>
-        </div>
-      </div>
-      
-    </div>
-    
-    <div class="timeline">
-      <h1>Experiences</h1>
-      <ul>
-        <li style="--accent-color:#71b4e1">
-            <div class="date">May 2024 - Present</div>
-            <div class="title">
-              <b>University of Michigan</b><br>
-              Undergraduate Research Assistant
-            </div>
-            <div class="descr">
-              - Collaborating with UMSI&apos;s Computational Social Science research team to deploy a webapp that uses GPT
-              to predict events in a user&apos;s daily life.<br>
-              - Exploring the possibility of recording experiences with AI tools being a scalable approach to increasing emotions
-              of empathy and perspective-taking.<br>
-              - Utilizing prompt engineering to strengthen auto-complete features that form the base of emotion testing.
-            </div>
-        </li>
-        <li style="--accent-color:#4CADAD">
-            <div class="date">Sep 2023 - Nov 2023</div>
-            <div class="title">
-              <b>Michigan Data Science Team</b><br>
-              Machine Learning Engineer
-            </div>
-            <div class="descr">- Created a custom Convolutional Neural Network to predict whether an image is real or photoshopped with PyTorch.</div>
-        </li>
-        <li style="--accent-color:#66bd6d">
-            <div class="date">May 2023 - Jul 2023</div>
-            <div class="title">
-              <b>FarEye</b><br>
-              Software Engineer Intern
-            </div>
-            <div class="descr">
-              - Automated Dashboard Migration process on Superset resulting in savings of over 100 hours per month using
-              Github Actions, APIs, and Web Development.<br>
-              - Migrated data from Redshift to Databricks using Pyspark. Set up data pipelines to convert Bronze layer data to
-              Silver layer on Databricks.
-            </div>
-        </li>
-        <li style="--accent-color:#f8cd0c">
-            <div class="date">Sep 2022 - Nov 2022</div>
-            <div class="title">
-              <b>Portlab</b><br>
-              Machine Learning Engineer
-            </div>
-            <div class="descr">
-              - Conducted Data Preprocessing and Vectorization on a dataset of 9 million tweets using Pandas and NLTK.<br>
-              - Utilized Doc2Vec and scikit-learn to tokenize data, develop a Distributed Bag-of-Words NLP classifier, and train ML models to predict whether a tweet is written by a real user or bot with 94.5% accuracy.
-            </div>
-        </li>
-        <li style="--accent-color:#f6a84b">
-            <div class="date">May 2021 - Dec 2021</div>
-            <div class="title">
-              <b>Lotus Petal Foundation</b><br>
-              Volunteer
-            </div>
-            <div class="descr">
-              - Created 'Intro to Programming' and 'Python' tutorials as teaching material.<br>
-              - Tutored a class of 70 underprivileged kids in Computer Science for 6 months using this material over the pandemic.
-            </div>
-        </li>
-        <li style="--accent-color:#ff4a4a">
-          <div class="date">Jan 2020 - Feb 2021</div>
-          <div class="title">
-            <b>Fun-STEM</b><br>
-            Founder
-          </div>
-          <div class="descr">
-            - Developed three video games to teach STEM concepts using JavaScript (matter.js and p5.js).<br>
-            - Conducted workshops with Grade 9 students to teach physics concepts using these games
 
-          </div>
-      </li>
-    </ul>
-    
-  </div>
-    <!-- <script   src="https://code.jquery.com/jquery-1.2.6.min.js"   integrity="sha256-1UhTB3WmKG9JumbgcVh2tOxZhZZrApHCFWj+z8QXjo0="   crossorigin="anonymous"></script> -->
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Avi Bhattacharya</h1>
+                <p>Computer Science Student at the University of Michigan</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a passionate Computer Science student with a strong interest in the intersection of software engineering and artificial intelligence. I'm always looking for new opportunities to learn and grow, and I'm excited to apply my skills to real-world problems in both industry and research settings.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>ServiceNow - Software Engineer Intern</h3>
+                    <p class="date">Dec 2024 - May 2025</p>
+                    <ul>
+                        <li>Implemented a Retrieval-Augmented Generation (RAG) powered “People Also Searched For” feature on ServiceNow Platform, allowing for reduced bounce rates and more efficient search.</li>
+                        <li>Designed and deployed an internal RAG app, reducing employee query resolution time by 25%.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>GrowAI - Undergraduate Research Assistant</h3>
+                    <p class="date">Dec 2024 - May 2025</p>
+                    <ul>
+                        <li>Curated dataset to evaluate VLMs on spatial reasoning and perspective-taking, uncovering model limitations via attention map analysis.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>University of Michigan - Undergraduate Research Assistant</h3>
+                    <p class="date">May 2024 - Dec 2024</p>
+                    <ul>
+                        <li>Collaborating with UMSI's Computational Social Science research team to deploy a webapp that uses GPT to predict events in a user's daily life.</li>
+                        <li>Exploring the possibility of recording experiences with AI tools being a scalable approach to increasing emotions of empathy and perspective-taking.</li>
+                        <li>Utilizing prompt engineering to strengthen auto-complete features that form the base of emotion testing.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>FarEye - Software Engineer Intern</h3>
+                    <p class="date">May 2023 - Jul 2023</p>
+                    <ul>
+                        <li>Automated Dashboard Migration process on Superset resulting in savings of over 100 hours per month using Github Actions, APIs, and Web Development.</li>
+                        <li>Migrated data from Redshift to Databricks using Pyspark. Set up data pipelines to convert Bronze layer data to Silver layer on Databricks.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Image Photoshop Detection</h3>
+                    <p>Custom Convolutional Neural Network to predict whether an image is real or photoshopped.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Bot Tweet Detection</h3>
+                    <p>ML model to predict whether a tweet is written by a real user or bot.</p>
+                </div>
+                <div class="project-card">
+                    <h3><a href="https://github.com/avi22bhattacharya/music-ai-generator" target="_blank">tune.ai</a></h3>
+                    <p>An AI-powered music generation tool.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C/C++</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>Assembly</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Full Stack Development</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>React</li>
+                        <li>Flask</li>
+                        <li>SQLite3</li>
+                        <li>REST API</li>
+                        <li>AWS</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>ML & AI</h3>
+                    <ul>
+                        <li>Large Language Models (LLMs)</li>
+                        <li>Computer Vision</li>
+                        <li>Retrival-Augmented Generation (RAG)</li>
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>PyTorch</li>
+                        <li>NLTK</li>
+                        <li>Gensim</li>
+                        <li>Audiocraft</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email or connect with me on social media.</p>
+            <div class="contact-links">
+                <a href="mailto:avibhatt@umich.edu">Email</a>
+                <a href="https://www.linkedin.com/in/avi-bhattacharya-a9b052210/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/avi22bhattacharya" target="_blank">GitHub</a>
+                <a href="https://drive.google.com/file/d/1v3qf_69HtnM7XvsAALrNHS1IpOxsgR6W/view?usp=sharing" target="_blank">Resume</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Avi Bhattacharya</p>
+    </footer>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

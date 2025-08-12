@@ -1,18 +1,31 @@
-var slideIndex = 0;
-var slides = document.querySelectorAll('#slideshow h1');
+const themeSwitch = document.getElementById('checkbox');
 
-function showSlides() {
-slideIndex++;
-if (slideIndex >= slides.length) {
-slideIndex = 0;
+themeSwitch.addEventListener('change', function() {
+    if(this.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        themeSwitch.checked = true;
+    }
 }
 
-for (var i = 0; i < slides.length; i++) {
-slides[i].classList.remove('active');
-}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-slides[slideIndex].classList.add('active');
-}
-
-setInterval(showSlides, 2000);
-
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
